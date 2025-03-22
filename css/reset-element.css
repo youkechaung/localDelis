@@ -1,0 +1,40 @@
+.el .title {
+  height: 8vh;
+  padding: 1vw;
+  line-height: 8vh;
+  box-sizing: border-box;
+  border-bottom: 2px solid #a5a5aa;
+}
+.el .title i {
+  font-size: 28px;
+}
+.el .nav-list {
+  display: flex;
+  flex-direction: column;
+}
+.el .nav-list li a {
+  font-size: 3.5vw;
+  display: inline-block;
+  padding: 3vw;
+}
+.el .nav-list .on a {
+  color: #e70012;
+}
+.el .el-carousel__indicators--horizontal {
+  bottom: 10px;
+}
+.el .el-carousel__indicators--horizontal .el-carousel__indicator--horizontal button {
+  width: 8px;
+  height: 8px;
+  margin: 0 10px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+.el .el-carousel__indicators--horizontal .el-carousel__indicator--horizontal.is-active button {
+  background: #ffffff;
+  background-color: #e70012;
+  border-radius: 10px;
+}
+.el .el-carousel__arrow {
+  display: none !important;
+}

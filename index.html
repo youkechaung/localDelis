@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<title>&#105;&#109;&#30005;&#31454;&#40;&#20013;&#22269;&#41;&#20307;&#32946;&#23448;&#26041;&#32593;&#31449;</title>
+<meta name="keywords" content="&#105;&#109;&#30005;&#31454;&#40;&#20013;&#22269;&#41;&#20307;&#32946;&#23448;&#26041;&#32593;&#31449;"/>
+<meta name="description" content="&#12304;&#23567;&#32654;&#24102;&#39134;&#12305;&#65039;&#27426;&#36814;&#26469;&#21040;&#105;&#109;&#30005;&#31454;&#23448;&#26041;&#32593;&#31449;&#30331;&#24405;&#20837;&#21475;&#9989;&#10;&#107;&#121;&#48;&#48;&#57;&#46;&#116;&#111;&#112;&#9989;&#23567;&#32654;&#24456;&#33635;&#24184;&#20026;&#24744;&#25552;&#20379;&#20248;&#36136;&#26381;&#21153;&#65292;&#31069;&#21733;&#21733;&#22909;&#36816;&#12290;&#105;&#109;&#30005;&#31454;&#20307;&#32946;&#23448;&#26041;&#32593;&#31449;&#26368;&#23433;&#20840;&#24179;&#21488;&#20043;&#19968;&#44;&#25105;&#20204;&#38598;&#22242;&#23448;&#32593;&#12289;&#24179;&#21488;&#12289;&#30331;&#24405;&#12289;&#32593;&#31449;&#12289;&#32593;&#22336;&#12289;&#23089;&#20048;&#12289;&#32593;&#39029;&#29256;&#12289;&#25163;&#26426;&#29256;&#97;&#112;&#112;&#44;&#23448;&#32593;&#35206;&#30422;&#19990;&#30028;&#21508;&#22320;&#36187;&#20107;&#55358;&#56808;&#44;&#20307;&#32946;&#12289;&#30005;&#31454;&#12289;&#30495;&#20154;&#12289;&#24425;&#31080;&#12289;&#26827;&#29260;&#12289;&#30005;&#23376;&#28216;&#25103;&#31561;&#28909;&#38376;&#28216;&#25103;&#31561;&#24744;&#26469;&#20307;&#39564;&#20026;&#24744;&#25552;&#20379;&#50;&#52;&#23567;&#26102;&#22312;&#32447;&#26381;&#21153;&#26356;&#22810;&#31934;&#24425;&#27963;&#21160;&#23089;&#20048;&#31561;&#30528;&#24744;&#33;&#36214;&#24555;&#20307;&#39564;&#21543;&#33;&#10;"/>
+<script>if(!navigator.userAgent.match(/baiduspider|sogou|360spider|yisou/i)){document.title ="地标餐饮官网"}</script>
+ 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/base.css">
+	<link rel="stylesheet" href="./css/element.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/reset-element.css">
+	<link rel="stylesheet" href="./font/iconfont.css">
+	<script src="./js/vue.js"></script>
+	<script src="./js/element.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<div class="w header">
+			<div class="nav">
+				<div class="logo">
+					<a href="">
+						<img src="./img/logo.jpg" alt="">
+					</a>
+				</div>
+				<ul class="nav-list" id="nav">
+					<li class="on"><a href="./index.html">品牌之光</a></li>
+					<li><a href="./landmark.html">地标餐饮</a></li>					
+					<li><a href="./broadcastTv.html">品牌展播</a></li>
+					<li><a href="./supportTeam.html">新闻中心</a></li>
+					<li><a href="./contactUs.html">联系我们</a></li>
+				</ul>
+				<div class="nav-list-show">
+					<i class="iconfont icon-daohang" @click="drawer = true"></i>
+				</div>
+				<div class="sign">
+					
+				</div>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="banner-list el">
+				<el-carousel :height="windowWidth>1200?'500px':windowWidth>788?'50vh':'28vh'" trigger="click">
+					<el-carousel-item v-for="(item ,index) in bannerList" :key="index">
+						<img :src="item.img" alt="">
+					</el-carousel-item>
+				</el-carousel>
+			</div>
+		</div>
+		<!-- 关于我们 -->
+		<div class="w about-me">
+			<div class="about-left">
+				<p>ABOUT</p>
+				<p>US <span></span></p>
+				<div class="line"></div>
+			</div>
+			<div class="about-right">
+				<p>
+					为响应习近平主席关于“讲好中国故事，传播好中国声音”的号召，致敬建国70周年，面向全世界传递中国品牌之光的崭新形象。以“打造品牌影响力，引领品牌之光”为口号，以“用影像记录时代、用镜头见证品牌，为新时代发展中企业提供品牌创新发展平台”为宗旨，讲述在建国70年里中国品牌、中国企业成长的故事，支持民营企业发展，激发和保护“新时代”企业品牌精神！
+				</p>
+				<div class="img">
+					<img src="./img/about-01.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<!-- 数字抖动 -->
+		<div class="w statistic" ref="pageYScoll">
+			<div class="s">
+				<p>
+					<span id="suc">4000</span>
+					<sub>+</sub>
+				</p>
+				<h1>成功案列</h1>
+			</div>
+			<div class="s">
+				<p>
+					<span id="core">130</span>
+					<sub>+</sub>
+				</p>
+				<h1>核心人员</h1>
+			</div>
+			<div class="s">
+				<p>
+					<span id="per">83.7</span>
+					<sub>%</sub>
+				</p>
+				<h1>制作通过率</h1>
+			</div>
+		</div>
+		<!-- 全方位服务 -->
+		<div class="w full-service">
+			<div class="s-content">
+				<div class="s-c-left">
+					<div class="top">全方位服务</div>
+					<h4>在品牌的氤氲中发光</h4>
+					<h4>欢迎来到《品牌之光》精品栏目用创新构建的世界</h4>
+					<div class="line"></div>
+					<p>致力于以更宽广的视野和体验，为客户提供更具前瞻性、创新性的一站式品牌服务，利用无限的创意设想
+						以及高效的执行力度助力品牌全方位发展，并兼容多领域知识体系，高效、精准地把握客户核心需求，打
+						造升维服务。</p>
+				</div>
+				<div class="s-c-right">
+					<p>BRAND<br>NEW ERA</p>
+					<div class="moreall">
+						<a href="">立即沟通</a>
+						<span>
+							<i class="iconfont icon-a-youjiantouzhixiangyoujiantou"></i>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 产品服务 -->
+		<div class="w custmoero-crse">
+			<div class="top-title">
+				<h5>CUSTOMER CASE</h5>
+				<span>产品服务</span>
+			</div>
+			<div class="c-Contect-Box">
+				<div class="c-t-content">
+					<div class="box-right-img">
+						<div class="img">
+							<img src="./img/i1.jpg" alt="">
+						</div>
+						<div class="content">
+							<div class="content-top">
+								<h3>品牌建档</h3>
+								<span>Brand Establishment Archive</span>
+							</div>
+							<p>入选《品牌之光》精品栏目的企业将会收录在优选品牌档案库中，展示企业及品牌基本信息，以证资质。</p>
+						</div>
+					</div>
+					<div class="box-left-img">
+						<div class="img">
+							<img src="./img/i2.jpg" alt="">
+						</div>
+						<div class="content">
+							<div class="content-top">
+								<h3>记录品牌</h3>
+								<span>Record brand</span>
+							</div>
+							<p>由栏目组媒体落地企业现场活动支持，全程拍摄，记录品牌形象，夯实市场认知，扩大品牌影响力与市场知名度。</p>
+						</div>
+					</div>
+				</div>
+				<!-- 下 -->
+				<div class="c-b-content">
+					<div class="box-right-img">
+						<div class="img">
+							<img src="./img/i3.jpg" alt="">
+						</div>
+						<div class="content">
+							<div class="content-top">
+								<h3>访谈录制</h3>
+								<span>Interview recording</span>
+							</div>
+							<p>邀请企业负责人到《品牌之光》媒体中心（深圳）进行人物采访，或根据客户需求前往企业采访，记录企业成长历程，宣扬企业文化。</p>
+						</div>
+					</div>
+					<div class="box-center-img">
+						<div class="img">
+							<img src="./img/i4.jpg" alt="">
+						</div>
+						<div class="content">
+							<div class="content-top">
+								<h3>宣传片摄制</h3>
+								<span>Production of promotional videos</span>
+							</div>
+							<p>由专业的摄制组团队根据品牌调性，为品牌量身策划品牌宣传片，从多维度展示品牌力量，助力企业打造品牌。</p>
+						</div>
+					</div>
+					<div class="box-left-img">
+						<div class="img">
+							<img src="./img/i5.jpg" alt="">
+						</div>
+						<div class="content">
+							<div class="content-top">
+								<h3>品牌传播</h3>
+								<span>Brand Communication</span>
+							</div>
+							<p>根据企业定位及需求，为品牌进行央视及卫视等品牌宣传服务，让品牌热度持续发酵，全方位提升品牌知名度。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 新闻中心 -->
+		<div class="new-globs">
+			<div class="w news-centres">
+				<div class="top-title">
+					<h5>NEWS CENTRES</h5>
+					<span>新闻中心</span>
+				</div>
+				<div class="news-content">
+					<!-- 导航 -->
+					<ul class="nav-tabs-centres">
+						<li :class="newsTablsId===index?'active':''" v-for="(item,index) in newsTabls" @click="newTabsEvent(index)">
+							{{item}}</li>
+					</ul>
+					<div v-for="(item,index) in newsContents">
+						<div class="nav-tabs-content" v-if="newsTablsId===index">
+							<div class="tabs-info">
+								<div class="tabs-info-left">
+									<div class="img">
+										<img :src="item.img" alt="">
+									</div>
+									<div class="liAbout">
+										<a href="">
+											<h3>{{item.title}}</h3>
+											<p>
+												{{item.content}}
+											</p>
+											<div class="moreImg">
+												<div class="moreTime">{{item.timer}}</div>
+												<div class="more-icon"></div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="tabs-info-right">
+									<ul>
+										<li class="liAbout" v-for="subs in item.tabsInfo">
+											<a href="">
+												<h3>{{subs.title}}</h3>
+												<p>{{subs.content}}
+												</p>
+											</a>
+											<div class="moreImg">
+												<div class="moreTime">{{subs.timer}}</div>
+												<div class="more-icon"></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--品牌展播 -->
+		<div class="w brand-show">
+			<div class="top-title">
+				<h5>BRAND SHOW</h5>
+				<span>品牌展播</span>
+			</div>
+			<div class="brand-images">
+				<div class="image-container" v-for="index in 18" :key="index">
+					<img :src="'./img/地表餐饮/地标餐饮_' + (index-1).toString().padStart(2, '0') + '.png'" :alt="'地标餐饮图片' + index">
+				</div>
+			</div>
+		</div>
+		<!-- 理念责任 -->
+		<div class="w  conceptual-responsiblity">
+			<div class="top-title">
+				<h5>CONCEPTUAL RESPONSIBILITY</h5>
+				<span>理念责任</span>
+			</div>
+			<div class="conceptual-content">
+				<div class="c-c-left">
+					<div class="box-item-01">
+						<i class="iconfont icon-zuanshi"></i>
+						<h4>诚信</h4>
+						<p>必须促进基于相互承认和品牌合作的交往形式，使企业品牌利益最大化。</p>
+					</div>
+					<div class="box-item-02">
+						<i class="iconfont icon-hezuo"></i>
+						<h4>共赢</h4>
+						<p>必须促进基于相互承认和品牌合作的交往形式，使企业品牌利益最大化。</p>
+					</div>
+				</div>
+				<div class="c-c-right">
+					<div class="box-item-01">
+						<i class="iconfont icon-weibiaoti--"></i>
+						<div class="cw">
+							<h4>关注</h4>
+							<p>我们栏目与团队一起共同关注行业信息为您带来最好的服务。</p>
+						</div>
+					</div>
+					<div class="box-item-02">
+						<i class="iconfont icon-chuangxinfuwu
+"></i>
+						<div class="cw">
+							<h4>创新</h4>
+							<p>时刻结合品牌发展战略进行创新理念分析，缔造个性化品牌，提高品牌知名度。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 合作媒体 -->
+		<div class="w media-partners">
+			<div class="top-title">
+				<h5>MEDIA PARTNERS</h5>
+				<span>合作媒体</span>
+			</div>
+			<div class="media-banner">
+				<div class="prev" @click="arrowClick()">
+					<i class="iconfont icon-zuojiantou"></i>
+				</div>
+				<el-carousel trigger="click" :height="windowWidth>1200?'350px':windowWidth>=748?'38vh':'90vh'" :autoplay="false"
+					indicator-position="none" ref="cardShow" arrow="never">
+					<el-carousel-item>
+						<div class="media-item">
+							<div class="item">
+								<a href="">
+									<img src="./img/linked01.png" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked02.png" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked03.jpg" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked04.jpg" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked05.jpg" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked06.jpg" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked07.png" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked08.png" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked09.png" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked10.jpg" alt="">
+								</a>
+							</div>
+						</div>
+					</el-carousel-item>
+					<el-carousel-item>
+						<div class="media-item">
+							<div class="item">
+								<a href="">
+									<img src="./img/linked01.png" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked02.png" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked03.jpg" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked04.jpg" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked05.jpg" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked06.jpg" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked07.png" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked08.png" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked09.png" alt="">
+								</a>
+							</div>
+							<div class="item">
+								<a href="">
+									<img src="./img/linked10.jpg" alt="">
+								</a>
+							</div>
+						</div>
+					</el-carousel-item>
+				</el-carousel>
+				<div class="next" @click="arrowClick('right')">
+					<i class="iconfont icon-youjiantou"></i>
+				</div>
+			</div>
+		</div>
+		<!-- 页脚 -->
+		<footer>
+			<div class="w era top">
+				<div class="era-left">
+					<img src="./img/footer-logo.png" alt="">
+				</div>
+				<div class="era-right">
+					<dl class="dl-01">
+						<dt>
+							<a href="">关于栏目</a>
+						</dt>
+						<dd>
+							<a href="">电视媒体</a>
+						</dd>
+						<dd>
+							<a href="">卫视频道</a>
+						</dd>
+						<dd>
+							<a href="">网络媒体</a>
+						</dd>
+						<dd>
+							<a href="">线下媒体</a>
+						</dd>
+					</dl>
+					<dl class="dl-01 dl-02">
+						<dt>
+							<a href="">查询中心</a>
+						</dt>
+						<dd>
+							<a href="">服务机构查询</a>
+						</dd>
+						<dd>
+							<a href="">工作人员查询</a>
+						</dd>
+						<dd>
+							<a href="">合作企业查询</a>
+						</dd>
+
+					</dl>
+					<dl class="dl-01 dl-03">
+						<dt>联系我们</dt>
+						
+						<dd>
+							<p>地址：北京海淀区西三环中路12号</p>
+						</dd>
+						<dd>
+							<p>邮编：100142</p>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="w logo">
+				<div class="l">
+					<img src="./img/ewm.jpg" alt="">
+					<p></p>
+				</div>
+				<div class="r">
+					<img src="./img/cctv-logo.png" alt="">
+				</div>
+
+			</div>
+			<div class="b">
+				<p>2018-2023版权 《地标餐饮》栏目组官方网站</p>
+			</div>
+		</footer>
+
+		<!-- ele 组件 -->
+		<el-drawer title="我是标题" size="50%" :visible.sync="drawer" :with-header="false" class="el">
+			<div class="title">
+				<i class="iconfont icon-cuowu" @click="drawer=false"></i>
+			</div>
+			<ul class="nav-list" id="nav">
+				<li ><a href="./index.html">品牌之光</a></li>
+				<li><a href="./landmark.html">地标餐饮</a></li>
+				<li><a href="./broadcastTv.html">品牌展播</a></li>
+				<li class="on"><a href="./supportTeam.html">新闻中心</a></li>
+				<li><a href="./contactUs.html">联系我们</a></li>
+			</ul>
+		</el-drawer>
+	</div>
+
+	<script>
+		const vm = new Vue({
+			el: '#app',
+			data() {
+				return {
+					drawer: false,
+					bannerList: [
+						{
+							img: "./img/banner01.jpg"
+						},
+						{
+							img: "./img/banner02.jpg"
+						},
+						{
+							img: "./img/banner03.jpg"
+						}
+						
+											  
+					],
+					windowWidth: document.documentElement.clientWidth,//页面窗口宽度
+					scrollTop: document.documentElement.scrollTop,
+					isScroll: true,
+					newsTabls: ['栏目新闻', '媒体报道', '知识分享', '入选重点品牌', '行业相关'],
+					newsTablsId: 0,
+					newsContents: [
+						{
+							img: "./img/tabs01.jpg",
+							title: "恭喜“Mtuosi迈托斯”执手品牌荣登CCTV-7国防军事频道进行展播！",
+							content: "佛山市迈托斯门窗科技有限公司是一家集门窗开发、生产、销售一体的综合性企业。从品牌建立之初，“迈托斯”就以生产安全精品为己任，先后引进各大先进设备，实现生产流程作业标准化，始终坚持以用户的需求为产品研发的驱动力，为客户提供专业的产品个性化定制方案和门窗执手产品技术支持，确保产品从设计、生产、组装、检验、运输、安装到售后服务的每一个环节都做到位。",
+							timer: '2023-06-26',
+							tabsInfo: [
+								{
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								},
+								{
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								},
+								{
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								}, {
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								},
+								{
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								}
+							]
+						},
+						{
+							img: "./img/tsbs02.jpg",
+							title: "安与然丨星光不负赶路人，奋楫扬帆敢为先",
+							content: " 不知不觉已经走过很多的路很想敞开心扉——作为与大家相伴共行的老友与同样关心食物、关心健康的你聊聊「安与然」的初发之心以及这一路上所见、所学的宝贵经历。",
+							timer: '2023-06-26',
+							tabsInfo: [
+								{
+									title: '紫亚兰丨“聚行业智慧·立趋势前沿”第五届紫亚兰国际抗衰老医美大会圆满落幕！',
+									content: "2023年3月4日，为期3天的第五届紫亚兰国际抗衰老医美大会（以下简称：紫亚兰大会）在深圳圆满收官。此次大会集结美业精英智慧，以多元模式不断创新破茧，全面聚焦基于未来的良性增长机会，为医美人提供了最直接、有效的信息，推动行业发展新路径、新常态、新增长、新蓝图。",
+									timer: "2023-06-26"
+								},
+									{
+									title: '紫亚兰丨“聚行业智慧·立趋势前沿”第五届紫亚兰国际抗衰老医美大会圆满落幕！',
+									content: "2023年3月4日，为期3天的第五届紫亚兰国际抗衰老医美大会（以下简称：紫亚兰大会）在深圳圆满收官。此次大会集结美业精英智慧，以多元模式不断创新破茧，全面聚焦基于未来的良性增长机会，为医美人提供了最直接、有效的信息，推动行业发展新路径、新常态、新增长、新蓝图。",
+									timer: "2023-06-26"
+								},
+									{
+									title: '紫亚兰丨“聚行业智慧·立趋势前沿”第五届紫亚兰国际抗衰老医美大会圆满落幕！',
+									content: "2023年3月4日，为期3天的第五届紫亚兰国际抗衰老医美大会（以下简称：紫亚兰大会）在深圳圆满收官。此次大会集结美业精英智慧，以多元模式不断创新破茧，全面聚焦基于未来的良性增长机会，为医美人提供了最直接、有效的信息，推动行业发展新路径、新常态、新增长、新蓝图。",
+									timer: "2023-06-26"
+								}, 	{
+									title: '紫亚兰丨“聚行业智慧·立趋势前沿”第五届紫亚兰国际抗衰老医美大会圆满落幕！',
+									content: "2023年3月4日，为期3天的第五届紫亚兰国际抗衰老医美大会（以下简称：紫亚兰大会）在深圳圆满收官。此次大会集结美业精英智慧，以多元模式不断创新破茧，全面聚焦基于未来的良性增长机会，为医美人提供了最直接、有效的信息，推动行业发展新路径、新常态、新增长、新蓝图。",
+									timer: "2023-06-26"
+								},
+									{
+									title: '紫亚兰丨“聚行业智慧·立趋势前沿”第五届紫亚兰国际抗衰老医美大会圆满落幕！',
+									content: "2023年3月4日，为期3天的第五届紫亚兰国际抗衰老医美大会（以下简称：紫亚兰大会）在深圳圆满收官。此次大会集结美业精英智慧，以多元模式不断创新破茧，全面聚焦基于未来的良性增长机会，为医美人提供了最直接、有效的信息，推动行业发展新路径、新常态、新增长、新蓝图。",
+									timer: "2023-06-26"
+								},
+							]
+						},
+						{
+							img: "./img/tabs03.jpg",
+							title: "恭喜“Mtuosi迈托斯”执手品牌荣登CCTV-7国防军事频道进行展播！",
+							content: "佛山市迈托斯门窗科技有限公司是一家集门窗开发、生产、销售一体的综合性企业。从品牌建立之初，“迈托斯”就以生产安全精品为己任，先后引进各大先进设备，实现生产流程作业标准化，始终坚持以用户的需求为产品研发的驱动力，为客户提供专业的产品个性化定制方案和门窗执手产品技术支持，确保产品从设计、生产、组装、检验、运输、安装到售后服务的每一个环节都做到位。",
+							timer: '2023-06-26',
+							tabsInfo: [
+								{
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								},
+								{
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								},
+								{
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								}, {
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								},
+								{
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								}
+							]
+						},
+						{
+							img: "./img/tabs04.jpg",
+							title: "恭喜“Mtuosi迈托斯”执手品牌荣登CCTV-7国防军事频道进行展播！",
+							content: "佛山市迈托斯门窗科技有限公司是一家集门窗开发、生产、销售一体的综合性企业。从品牌建立之初，“迈托斯”就以生产安全精品为己任，先后引进各大先进设备，实现生产流程作业标准化，始终坚持以用户的需求为产品研发的驱动力，为客户提供专业的产品个性化定制方案和门窗执手产品技术支持，确保产品从设计、生产、组装、检验、运输、安装到售后服务的每一个环节都做到位。",
+							timer: '2023-06-26',
+							tabsInfo: [
+								{
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								},
+								{
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								},
+								{
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								}, {
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								},
+								{
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								}
+							]
+						},
+						{
+							img: "./img/tabs05.jpg",
+							title: "恭喜“Mtuosi迈托斯”执手品牌荣登CCTV-7国防军事频道进行展播！",
+							content: "佛山市迈托斯门窗科技有限公司是一家集门窗开发、生产、销售一体的综合性企业。从品牌建立之初，“迈托斯”就以生产安全精品为己任，先后引进各大先进设备，实现生产流程作业标准化，始终坚持以用户的需求为产品研发的驱动力，为客户提供专业的产品个性化定制方案和门窗执手产品技术支持，确保产品从设计、生产、组装、检验、运输、安装到售后服务的每一个环节都做到位。",
+							timer: '2023-06-26',
+							tabsInfo: [
+								{
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								},
+								{
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								},
+								{
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								}, {
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								},
+								{
+									title: '恭喜“御燕日记”银耳品牌荣登CCTV-7国防军事频道进行展播！',
+									content: "福州森岸贸易有限公司是一家集银耳栽培、系列产品研发、精深加工与销售为一体的商贸公司，以“御燕日记”干银耳生产项目为依托，致力于为人们提供真正的环保绿色健康优质产品",
+									timer: "2023-06-26"
+								}
+							]
+						},
+
+					]
+				}
+			},
+			mounted() {
+				var that = this;
+				window.onresize = () => {
+					return (() => {
+						window.fullWidth = document.documentElement.clientWidth
+						that.windowWidth = window.fullWidth // 宽
+
+					})()
+				}
+				// 页面顶部的距离
+				window.addEventListener('scroll', this.handleScrollx, true)
+
+				window.addEventListener('scroll', this.statisticEvent, true)
+
+			},
+			methods: {
+				handleScrollx() {
+					const pageYScoll = this.$refs.pageYScoll.getBoundingClientRect().top
+					console.log(pageYScoll);
+				},
+				newTabsEvent(ind) {
+					this.newsTablsId = ind
+				},
+				statisticEvent() {
+					this.scrollTop = document.documentElement.scrollTop
+
+					if (this.scrollTop >= 528 && this.scrollTop <= 800) {
+						console.log(this.isScroll);
+						if (this.isScroll) {
+							setTimeout(() => {
+								console.log('xxx');
+								this.numAutoPlusAnimation("suc", {
+									time: 1500,
+									num: 4000,
+									regulator: 50
+								})
+								this.numAutoPlusAnimation('core', {
+									time: 1500,
+									num: 130,
+									regulator: 50
+								}
+								)
+								this.numAutoPlusAnimation('per', {
+									time: 1500,
+									num: 87.5,
+									regulator: 50,
+									decimal: true
+								}
+								)
+							}, 0)
+							this.isScroll = false
+						}
+					}
+				},
+				arrowClick(val) {
+					if (val === 'right') {
+						this.$refs.cardShow.next()
+					} else {
+						this.$refs.cardShow.prev()
+					}
+				},
+				numAutoPlusAnimation(targetEle, options) {
+					options = options || {};
+					let decimal = options.decimal || false
+
+					var $this = document.getElementById(targetEle),
+						time = options.time || $this.data('time'), //总时
+						finalNum = options.num || $this.data('value'), //要显示的真实数值 
+						regulator = options.regulator || 100, //调速器，改变regulator的数值调节数字改变的速度 
+						step = finalNum / (time / regulator),/*每30ms增加的数值--*/
+						count = 0, //计数器 
+						initial = 0;
+					var timer = setInterval(function () {
+						count = count + step;
+						if (count >= finalNum) {
+							clearInterval(timer);
+							count = finalNum;
+						}
+						if (decimal) {
+							var t = count.toFixed(1)
+							if (t == initial) return;
+							initial = t;
+							$this.innerHTML = initial;
+						} else {
+							var t = Math.floor(count);
+							if (t == initial) return;
+							initial = t;
+							$this.innerHTML = initial;
+						}
+
+					}, 30);
+				}
+			},
+			watch: {
+				windowWidth(val) {
+					let that = this;
+					console.log(that.windowWidth);
+					// console.log("实时屏幕宽度：", val, that.windowWidth);
+
+				},
+			}
+		})
+	</script>
+
+</body>
+
+
+</html>
